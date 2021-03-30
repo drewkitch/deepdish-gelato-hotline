@@ -23,6 +23,7 @@ def webhooks():
         process_webhook(request.json)
     except Exception as e:
         print("Exception raised:", e)
+        # TODO -- take action to record webhook payload, OR deny successful receipt of webhook
     finally:
         return '', 200
 

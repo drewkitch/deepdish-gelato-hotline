@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: just echo message
         run: >
-            echo "We have a ${{github.event.release.tag_name}} release of our ${{github.event.repository.full_name}} SDK: ${{ github.event.release.name }}
-            ${{ github.event.release.html_url }}"
+            echo "We have a new ${{github.event.release.tag_name}} release of our ${{github.event.repository.full_name}} SDK, version ${{ github.event.release.name }}!
+            check out the details here: ${{ github.event.release.html_url }}"

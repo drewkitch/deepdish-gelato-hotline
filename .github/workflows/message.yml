@@ -1,0 +1,12 @@
+on:
+  release:
+    types: [released]
+
+jobs:
+  test-templating:
+    runs-on: ubuntu-latest
+    steps:
+      - name: just echo message
+        run: |
+            We have a ${{github.event.release.tag_name}} release of our ${{github.event.repository.full_name}} SDK: ${{ github.event.release.name }}
+            ${{ github.event.release.html_url }}

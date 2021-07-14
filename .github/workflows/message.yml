@@ -17,6 +17,5 @@ jobs:
               "team-telnyx/telnyx-java": "Java",
               "team-telnyx/telnyx-dotnet": "Dotnet",
               "team-telnyx/telnyx-php": "PHP"
-            }')[github.event.repository.full_name] }} SDK,
-            version ${{ github.event.release.name }}!
+            }')[github.event.repository.full_name] }} SDK!
             Check out the details here: ${{ github.event.release.html_url }}"

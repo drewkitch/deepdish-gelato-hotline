@@ -8,5 +8,15 @@ jobs:
     steps:
       - name: just echo message
         run: >
-            echo "We have a new ${{github.event.release.tag_name}} release of our ${{ fromJson('{ "drewkitch/deepdish-gelato-hotline": "Deepdish Gelato Hotline", "deepdish-gelato-hotline": "just the repo" }')[github.event.repository.full_name] }} SDK, version ${{ github.event.release.name }}!
+            echo "We have a new ${{github.event.release.tag_name}} release of our
+            ${{ fromJson('{
+              "drewkitch/deepdish-gelato-hotline": "Deepdish Gelato Hotline",
+              "team-telnyx/telnyx-python": "Python",
+              "team-telnyx/telnyx-ruby": "Ruby",
+              "team-telnyx/telnyx-node": "Node",
+              "team-telnyx/telnyx-java": "Java",
+              "team-telnyx/telnyx-dotnet": "Dotnet",
+              "team-telnyx/telnyx-php": "PHP"
+            }')[github.event.repository.full_name] }} SDK,
+            version ${{ github.event.release.name }}!
             Check out the details here: ${{ github.event.release.html_url }}"
